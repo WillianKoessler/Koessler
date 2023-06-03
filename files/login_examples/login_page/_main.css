@@ -1,0 +1,273 @@
+/*#####################################################
+[VARIABLES]*/
+
+:root {
+
+	--geral-animation-time: 0.5s;
+	--bg-color-01: rgb(33, 104, 25);
+	--bg-color-02: rgb(39, 107, 175);
+	--bg-color-root: rgb(255, 0, 255);
+	--bg-color-01: 39, 107, 175;/*71, 192, 95;/**/
+	--bg-color-02: 33, 104, 25;/*42, 73, 190;/**/
+	--icon-animation-timing: ease;
+	--icon-animation-scale-to: 1;
+	--icon-animation-translate-toX: 0;
+	--icon-animation-translate-toY: -18;
+	--bar-animation-time: 0.5s;
+	--bar-animation-timing: ease;
+}
+
+/*#####################################################
+[TAGS]*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+	font-family: Poppins, sans-serif;
+}
+
+a {
+	background: transparent;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+	transition: all var(--geral-animation-time);
+	-webkit-transition: all var(--geral-animation-time);
+	-o-transition: all var(--geral-animation-time);
+	-moz-transition: all var(--geral-animation-time);
+}
+a:focus { outline: none !important; }
+a:hover { text-decoration: none; color: #fff; }
+
+input {
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+input:focus {
+	border-color: transparent !important;
+}
+
+img {
+	overflow: clip;
+	background: transparent;
+}
+
+input:focus::-webkit-input-placeholder, input:focus:-moz-placeholder, input:focus::-moz-placeholder, input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder {
+	color: #fff;
+}
+
+label {
+	margin: 0;
+	display: block;
+	background: transparent;
+}
+
+form {
+	background: transparent;
+}
+
+span {
+	background: transparent;
+}
+
+div {
+	background: transparent;
+}
+
+button {
+	background: transparent;
+}
+
+/*#####################################################
+[CLASSES]*/
+
+
+.limiter {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-login {
+	width: 100%;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	background: transparent;
+}
+
+.container-login::before {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: transparent;
+}
+
+.bg-canvas {
+	position: fixed;
+}
+.bg-canvas::after {
+	position: fixed;
+}
+
+
+.login-card {
+	width: 500px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 55px 55px 37px 55px;
+	background: var(--bg-color-root);
+	background: -webkit-linear-gradient(to bottom, rgb(var(--bg-color-01)), rgb(var(--bg-color-02)));
+	background: -o-linear-gradient(to bottom, rgb(var(--bg-color-01)), rgb(var(--bg-color-02)));
+	background: -moz-linear-gradient(to bottom, rgb(var(--bg-color-01)), rgb(var(--bg-color-02)));
+	background: linear-gradient(to bottom, rgb(var(--bg-color-01)), rgb(var(--bg-color-02)));
+}
+@media (max-width: 576px) {
+	.login-card {
+		padding: 55px 15px 37px 15px;
+	}
+}
+
+.login-logo {
+	display: block;
+	width: 60%;
+	background: transparent;
+	margin: auto;
+	filter: drop-shadow(2px 2px 1px black);
+}
+
+.login-title {
+	font-family: 'Exo 2';
+	font-size: 50px;
+	color: #fffffff0;
+	line-height: 1.2;
+	text-align: center;
+	text-transform: uppercase;
+
+	display: block;
+	padding-bottom: 5%;
+	padding-top: 2.5%;
+}
+
+.field-input {
+	width: 100%;
+	position: relative;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+
+.input-textbox {
+	color: #fff;
+	font-family: Poppins;
+	font-size: 20px;
+	line-height: 1.2;
+	height: 100%;
+	background: transparent;
+	padding-left: 3%;
+	padding-bottom: 3%;
+}
+.input-textbox::placeholder{
+	font-family: Poppins;
+	color: #ffffff80
+}
+
+
+.input-ico{
+	width: 16px;
+	height: 16px;
+	transition: all var(--geral-animation-time) var(--icon-animation-timing);
+	cursor: text;
+}
+.field-input:focus-within .input-ico {
+	transform: matrix( var(--icon-animation-scale-to), 0, 0, var(--icon-animation-scale-to), calc(var(--icon-animation-translate-toX)), calc(var(--icon-animation-translate-toY)));
+}
+.field-input:not(:focus-within) .input-ico {
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+
+.input-line {
+	position: relative;
+	display: block;
+	background-color: #fff;
+	height: 2px;
+	bottom: -2px;
+	transition: all var(--bar-animation-time) var(--bar-animation-timing);
+}
+.field-input:focus-within .input-line {
+	width: 100%;
+}
+.field-input:not(:focus-within) .input-line {
+	width: 0;
+}
+
+
+.checkbox-form {
+	display: block;
+	position: relative;
+	padding-left: 3%;
+	margin-bottom: 7%;
+	background-color: transparent;
+	color: #fffffff0;
+}
+
+.checkbox-box {
+	display: inline;
+}
+
+.checkbox-label {
+	display: inline;
+}
+
+
+.container-login-btn {
+	display: block;
+	position: relative;
+	/* border: 1px solid #333333; */
+	height: 50px;
+}
+
+.login-btn {
+	font-family: Poppins;
+	font-size: 20px;
+	color: #fff;
+	background: rgba(var(--bg-color-01), 0.5);
+	margin: 0;
+	border-radius: 10px;
+	border: 2px solid #00000080;
+	display: block;
+	position: absolute;
+	width:30%;
+	height: 75%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

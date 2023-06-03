@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Login - Segsys</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<link rel="icon" type="image/png" href="https://segtrab.com.br/etc/login/images/icons/favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Exo+2&family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" type="text/css" href="./login_page/_main.css">
+	</head>
+	<body>
+		<div class="limiter">
+			<div id="bg" class="bg-canvas">
+				<script src="./login_page/snow.js"></script>
+			</div>
+			<div class="container-login">
+				<div class="login-card">
+					<form id="form-main">
+						<img class="login-logo" src="login_page/logo.png"/>
+						<span class="login-title">SegSys</span>
+						<div class="field-input" onclick="redirectFocus('User')">
+							<img class="input-ico" src="./login_page/person.ico">
+							<input class="input-textbox" type="text" id="User" placeholder="Usuário">
+							<span class="input-line"></span>
+						</div>
+						<div class="field-input" onclick="redirectFocus('Pass')">
+							<img class="input-ico" src="./login_page/padlock.ico">
+							<input class="input-textbox" type="password" id="Pass" placeholder="Senha">
+							<span class="input-line"></span>
+						</div>
+						<div class="checkbox-form">
+							<input class="checkbox-box" id="ckb" type="checkbox" id="rememberme">
+							<label class="checkbox-label" for="ckb">Lembrar de mim</label>
+						</div>
+						<div class="container-login-btn">
+							<button class="login-btn">Entrar</button>
+						</div>
+						<div class="text-center p-t-90">
+							<a class="txt1" href="https://segtrab.com.br/sys/index.php#">Forgot Password?</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./login_page/_main.js"></script>
+	</body>
+</html>
