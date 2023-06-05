@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'Moririse2';
+  font-family: 'Icons';
   font-display: swap;
-  src:  url('mobirise2.eot?f2bix4');
-  src:  url('mobirise2.eot?f2bix4#iefix') format('embedded-opentype'),
-    url('mobirise2.ttf?f2bix4') format('truetype'),
-    url('mobirise2.woff?f2bix4') format('woff'),
-    url('mobirise2.svg?f2bix4#mobirise2') format('svg');
+  src:  url('icons.eot?f2bix4');
+  src:  url('icons.eot?f2bix4#iefix') format('embedded-opentype'),
+    url('icons.ttf?f2bix4') format('truetype'),
+    url('icons.woff?f2bix4') format('woff'),
+    url('icons.svg?f2bix4#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="mobi-"], [class*=" mobi-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'Moririse2' !important;
+  font-family: 'Icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
